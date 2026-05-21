@@ -140,3 +140,65 @@ h1 {
     padding: 40px 0;
   }
 }
+.callout {
+  max-width: 760px;
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 255, 255, 0.045);
+  padding: 18px 22px;
+  border-radius: 14px;
+  color: var(--text);
+  font-size: 1.12rem;
+}
+
+pre {
+  max-width: 760px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color: var(--text);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  color: var(--accent);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+td {
+  color: var(--muted);
+}
+.card-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: var(--accent);
+}

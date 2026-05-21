@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUBO Budget Optimizer | Andres Rigg</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="section">
+      <p class="eyebrow">Optimization Project</p>
+      <h1>QUBO Budget Optimizer</h1>
+      <h2>A toy model for project selection under budget constraints</h2>
+
+      <p class="summary">
+        This project explores how Quadratic Unconstrained Binary Optimization (QUBO)
+        can be used to model a practical planning problem: choosing the best set of
+        candidate facility projects without exceeding a fixed budget.
+      </p>
+
+      <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../resume.html">Resume</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Problem</h2>
+      <p>
+        Real planning work often involves a list of possible projects, each with a cost,
+        priority, risk impact, and timing constraint. The question is not simply
+        “which project is best?” The harder question is:
+      </p>
+
+      <p class="callout">
+        Which combination of projects gives the strongest overall value while staying
+        within the available budget?
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>The Toy Model</h2>
+      <p>
+        Each project is represented by a binary decision variable:
+      </p>
+
+      <pre><code>xᵢ = 1 if project i is selected
+xᵢ = 0 if project i is not selected</code></pre>
+
+      <p>
+        The model rewards high-value projects and penalizes project combinations that
+        exceed the budget.
+      </p>
+
+      <pre><code>minimize:  - project value + budget penalty</code></pre>
+
+      <p>
+        In plain English: pick valuable projects, but make going over budget expensive.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Sample Project Set</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Cost</th>
+              <th>Value Score</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Roof Replacement</td>
+              <td>$420K</td>
+              <td>92</td>
+              <td>Sustainment</td>
+            </tr>
+            <tr>
+              <td>HVAC Controls Upgrade</td>
+              <td>$260K</td>
+              <td>76</td>
+              <td>Energy</td>
+            </tr>
+            <tr>
+              <td>Parking Lot Repair</td>
+              <td>$180K</td>
+              <td>44</td>
+              <td>Site</td>
+            </tr>
+            <tr>
+              <td>Electrical Panel Replacement</td>
+              <td>$310K</td>
+              <td>81</td>
+              <td>Life Safety</td>
+            </tr>
+            <tr>
+              <td>Interior Renovation</td>
+              <td>$500K</td>
+              <td>69</td>
+              <td>Modernization</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Current Status</h2>
+      <div class="grid">
+        <article class="card">
+          <p class="tag">Phase 1</p>
+          <h3>Static Explanation</h3>
+          <p>
+            Define the planning problem, binary decision variables, objective function,
+            and budget penalty structure.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="tag">Phase 2</p>
+          <h3>Python Notebook</h3>
+          <p>
+            Build a small brute-force solver first, then compare it to a QUBO-style
+            formulation with penalty terms.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="tag">Phase 3</p>
+          <h3>Interactive Demo</h3>
+          <p>
+            Add a browser-based budget slider and selected-project summary so users
+            can explore the tradeoffs visually.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why This Matters</h2>
+      <p>
+        This project connects optimization theory to a real decision-support pattern:
+        limited funding, competing requirements, and the need to explain tradeoffs
+        clearly to non-technical stakeholders.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
