@@ -208,10 +208,14 @@ td {
   font-weight: 600;
 }
 
-.project-links a {
+.project-links a,
+.project-links a:visited {
+  color: var(--text);
   text-decoration: none;
 }
 
-.project-links a:hover {
+.project-links a:hover,
+.project-links a:focus {
+  color: var(--accent);
   text-decoration: underline;
 }
