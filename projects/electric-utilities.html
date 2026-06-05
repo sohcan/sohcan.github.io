@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Signal | Andres Rigg</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Project Detail</p>
+      <h1>Energy Signal</h1>
+      <h2>Synthetic Facility Utility Forecasting Dashboard</h2>
+
+      <p class="summary">
+        Energy Signal is a Streamlit dashboard built around synthetic monthly utility
+        billing data. It explores energy usage, cost trends, seasonal decomposition,
+        forecasting, and flagged readings in a facility-planning context.
+      </p>
+
+      <p class="project-links">
+        <a href="https://electric-utilities-dashboard-sohcan.streamlit.app/" target="_blank" rel="noopener">Launch the live Streamlit dashboard</a>
+        ·
+        <a href="https://github.com/sohcan/electric-utilities-dashboard" target="_blank" rel="noopener">View the GitHub repository</a>
+      </p>
+
+      <div class="links">
+        <a href="../projects.html">Back to Projects</a>
+        <a href="../index.html">Home</a>
+        <a href="../resume.html">Resume</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What it demonstrates</h2>
+      <div class="grid">
+        <article class="card">
+          <p class="tag">Data App</p>
+          <h3>Interactive Utility Review</h3>
+          <p>
+            The dashboard lets a user switch between installation-level metrics and
+            meter-specific views, with synthetic accounts, service locations, and
+            monthly readings.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="tag">Forecasting</p>
+          <h3>Seasonal-Trend Modeling</h3>
+          <p>
+            The app uses Seasonal-Trend decomposition using LOESS (STL) and forecasting
+            tools to separate observed usage, seasonal behavior, residuals, and trend.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="tag">Quality Control</p>
+          <h3>Flagged Readings</h3>
+          <p>
+            Synthetic operational spikes and data-entry errors create realistic examples
+            for outlier review, threshold tuning, and data-quality discussion.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why it matters</h2>
+      <p>
+        Utility data is often messy, delayed, and operationally contextual. This project
+        turns synthetic facility billing data into an interactive decision-support tool
+        that can help explain trends, flag unusual readings, and communicate energy
+        behavior to non-technical stakeholders.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
