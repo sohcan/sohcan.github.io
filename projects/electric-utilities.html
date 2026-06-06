@@ -9,7 +9,7 @@
 
 <body>
   <main class="page">
-    <section class="hero">
+    <section class="section project-intro">
       <p class="eyebrow">Project Detail</p>
       <h1>Energy Signal</h1>
       <h2>Synthetic Facility Utility Forecasting Dashboard</h2>
@@ -29,13 +29,21 @@
       <div class="links">
         <a href="../projects.html">Back to Projects</a>
         <a href="../index.html">Home</a>
-        <a href="../resume.html">Resume</a>
       </div>
     </section>
 
-    <section class="section">
-      <h2>What it demonstrates</h2>
-      <div class="grid">
+    <section class="section project-showcase">
+      <div class="launch-panel">
+        <a class="primary-launch" href="https://electric-utilities-dashboard-sohcan.streamlit.app/" target="_blank" rel="noopener">
+          Launch Energy Signal
+        </a>
+      </div>
+
+      <div class="preview-frame">
+        <img src="../assets/energy-signal-preview.png" alt="Energy Signal dashboard preview" />
+      </div>
+
+      <div class="grid showcase-grid">
         <article class="card">
           <p class="tag">Data App</p>
           <h3>Interactive Utility Review</h3>
@@ -50,8 +58,9 @@
           <p class="tag">Forecasting</p>
           <h3>Seasonal-Trend Modeling</h3>
           <p>
-            The app uses Seasonal-Trend decomposition using LOESS (STL) and forecasting
-            tools to separate observed usage, seasonal behavior, residuals, and trend.
+            The app uses Seasonal-Trend decomposition using Locally Estimated
+            Scatterplot Smoothing (LOESS) and forecasting tools to separate observed
+            usage, seasonal behavior, residuals, and trend.
           </p>
         </article>
 
